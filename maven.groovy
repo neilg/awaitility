@@ -4,7 +4,7 @@ podTemplate(containers: [
 
   node(POD_LABEL) {
     stage('Build a Maven project') {
-      git 'https://github.com/jenkinsci/kubernetes-plugin.git'
+      git 'https://github.com/neilg/awaitility.git'
       container('maven') {
           sh 'mvn -B clean package'
       }
