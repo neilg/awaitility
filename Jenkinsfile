@@ -4,7 +4,7 @@ podTemplate(containers: [
 
     node(POD_LABEL) {
         stage('Build a Maven project') {
-            git 'https://github.com/neilg/awaitility.git'
+            git url: 'https://github.com/neilg/awaitility.git', branch: "${env.BRANCH_NAME}"
             container('maven') {
                 sh 'mvn -B clean verify'
             }

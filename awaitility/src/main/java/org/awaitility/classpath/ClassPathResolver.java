@@ -18,7 +18,7 @@ package org.awaitility.classpath;
 
 public class ClassPathResolver {
 
-    public static boolean existInCP(String className) {
+    public static boolean exi stInCP(String className) {
         return existsInCP(className, ClassPathResolver.class.getClassLoader()) || existsInCP(className, Thread.currentThread().getContextClassLoader());
     }
 
